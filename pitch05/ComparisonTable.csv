@@ -1,0 +1,9 @@
+Method,Ease of Use,Performance Impact,Java Version Compatibility,Use Cases,Drawbacks
+Reflection,Moderate,Moderate,All versions,Accessing/modifying private fields/methods.,Slower than direct access; restricted in Java 9+ without --add-opens
+Serialization,Easy,Low,All versions,Reconstituting object state via deserialization.,Limited by transient fields; prone to security risks
+Unsafe Class,Advanced,High,All versions (restricted in 11+),Direct memory manipulation and bypassing checks.,Risky; JVM crashes possible; harder to use in modern Java
+Inner Classes,Easy,Negligible,All versions,Direct access to outer class private fields.,Can lead to unintended coupling of classes
+MethodHandles API,Advanced,Low,Java 7+,"Dynamic, low-level access to fields/methods.",Requires complex setup; restricted by module system in Java 9+
+Accessor Methods,Easy,Negligible,All versions,Using getters/setters to expose fields.,Breaks encapsulation if access is overly permissive
+Tools/Bytecode Libraries,Advanced,High,All versions,"Dynamic bytecode manipulation (e.g., ASM, ByteBuddy).",Requires external dependencies and advanced skills
+JNI/JNA,Advanced,High,All versions,Native code access to JVM memory and fields.,Platform-dependent; risky; bypasses Java safety entirely
